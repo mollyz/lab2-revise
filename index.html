@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dinner planner</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./view/stylecss.css">
+  
+  
+
+</head>
+
+<body onload="initialization()">
+    <div class="jumbotron" style="padding:0px;margin:0px;">
+
+        <!--fixed heading-->
+        <div class="row">
+          <div class="col-md-12" id="head-Background"onclick="initialization()">
+            <h1 class="marginLeft">HOMELETTE <span id="subtitle"> From the best chefs in the world directly into your kitchen.</span></h1></div>
+        </div>
+    </div>
+
+<!--page 1 hovering square-->
+    <div class="container" id="hover-div">
+            <h4>A Home Dinner Service</h4>
+            <hr>
+            <p>jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. <br><br>start quickly:
+            </p>
+            <button id="firstbutton" onclick="createnew();">Create new dinner</button>
+    </div>  
+<!--page 2.1 & 2.2 &2.3 sidebar-->    
+    <div class="row">
+        <div class="col-sm-3 sidenav" id="sideNavView">
+              <h2>My Dinner</h2>
+                  <div class="row">
+                    <div class="col-sm-3">People</div>
+                    <div class="col-sm-9">
+                        <p id="numberOfGuests">
+                    </div>
+                  </div>
+                  <br>
+                <div>
+                <table style="width:100%">
+                    <thead id="PriceTable">
+                        <tr>
+                          <td class="t0">Dish Name</td>
+                          <td class="t1"></td>
+                          <td class="t2">Cost</td>
+                    </thead>
+                    <tbody>
+                        <tr id="myMenu">
+                          <td class="t0">Pending</td>
+                          <td class="t1">0</td>
+                          <td class="t2">0.00</td>
+                        </tr>
+                        <tr>
+                          <td class="t0">Total</td>
+                          <td></td>
+                          <td id="totalPrice">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <button id="confirmDiner" onclick="confirmdinner();">Confirm Dinner</button>
+        </div>
+        <!--page 2.1 & 2.3  list view-->
+        <div class="container-fluid" id="SecondPage">
+            <div class="col-sm-9"id="searchArea">
+                <div >
+                    <h2>Select Dish</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form action="action_page.php">
+                            <input type="text" name="keyword">
+                            <button>search</button>
+                        </div>
+                        
+                        <div class="col-sm-8">
+                            <form>
+                                <select name="courseType">
+                                    <option value="Starter">Starter</option>
+                                    <option value="Maindish">Main dish</option>
+                                    <option value="Dessert">Dessert</option>
+                                    </select>
+                              </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class= "col-md-9" id="selectDishView">
+              <div class="floating-box" >
+                  <h4>Dishes list</h4>
+                  <div id="allDishes">
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+         
+
+
+<!--page 2.2 detial view-->
+<div class="col-sm-9" id="detailView">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div><h2 id="onedishname"></h2></div></br>
+                    <div id="onedishimage"></div></br>
+                    <div id="onedishdesprition"></div></br>
+                   <button onclick="backtoselect();">Back to Select Dish</button>
+                </div>
+                <div class="col-sm-6" id="Ingredientlist">
+                    <div><h3>INGREDIENTS FOR <span id="oneDishNumberOfGuest"></span> PEOPLE</h3></div>
+                    <hr>
+                    <div id="ingredientTable"style="overflow: auto">
+                      <table style="width:95%; text-align: center">
+                        <div id="oneDishIngredientsList">
+                        </div>      
+                      </table>
+                    </div>
+                    <hr>
+                    <div class="row" style="width:100%">
+                      <div class="col-sm-7">
+                          <button onclick="confirmdish();">Confirm Dish</button>
+                      </div>
+                      <div style="text-align: right;"class="col-sm-3">SEK
+                      </div>
+                      <div style="text-align: right;border:1px solid black;"class="col-sm-2">
+                        <p id="oneDishTotalPrice"></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div id="preparation">
+                <h1>PREPARATION</h1>
+                  <p>djsllanl  jlajd jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. </p>
+            </div>
+</div>
+
+
+<!--page 3 top bar-->
+<div class="jumbotron" id="topBarView" style="padding:0px;margin:0px;">
+    <div id="SummeryHeading">
+        <div class="table1">
+            <div class="tableCell">
+                <div class="content">
+                    <h2>My Dinner: <span id="topBarnumberOfGuest"></span> people</h2>
+                </div>
+            </div>
+        </div>
+        <div class="table2" id="table2">
+            <div class="tableCell">
+                <div class="content">
+                    <button class="bigButton" onclick="editmenu();" >Go back and edit menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--page 3.1 DinnerOverview-->
+<div class="content" id="dinnerOverviewView">
+      <div class="row" >
+          <div class="col-md-8 borderRight" id="myDisheslist"style="padding:10px; overflow:auto;height:300px" >   
+          </div>
+          <div class="col-md-4 bottomAlign1"style="padding-top:165px" >
+                  <h3>Totle:</h3>
+                  <p><span id="dinnerOverviewtTotalPrice"></span>SEK</p>
+          </div>
+        </div>
+      <hr>
+      <div class="col-md-12" style="text-align:center" id="printbutton">
+         <button class="bigButton" onclick="finalresult();">Print Full Recipe</button>
+      </div>
+</div>
+
+    
+<!--   page 3.2 DinnerPreparation-->
+<div class="container" id="dinnerPreparationView">
+      <div class="col-md-12">
+        <div id="preparedinner"></div>
+      </div>
+</div>   
+
+
+
+
+    <!--- example
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#section1">Dashboard</a></li>
+            <li><a href="#section2">Age</a></li>
+            <li><a href="#section3">Gender</a></li>
+            <li><a href="#section3">Geo</a></li>
+          </ul><br></div>
+
+
+        <div id="exampleView">
+            <div>
+                Number of guests: <span id="numberOfGuests"></span>
+            </div>
+            <div>
+          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+                <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+            </div>
+        </div>
+    </div>
+-->
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <!-- The application JavaScript code -->
+    <script src="./app.js"></script>
+    <script src="./model/dinnerModel.js"></script>
+    <script src="./view/interaction.js"></script>
+    <script src="./view/detailView.js"></script>
+    <script src="./view/exampleView.js"></script>
+    <script src="./view/dinnerOverviewView.js"></script>
+    <script src="./view/sideNavView.js"></script>
+    <script src="./view/selectDishView.js"></script>  
+    <script src="./view/prepareDishView.js"></script>  
+</body>
+
+</html>
