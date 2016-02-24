@@ -34,6 +34,7 @@
             </p>
             <button id="firstbutton" onclick="createnew();">Create new dinner</button>
     </div>  
+<div class="container-fluid" id="SecondPage">
 <!--page 2.1 & 2.2 &2.3 sidebar-->    
     <div class="row">
         <div class="col-sm-3 sidenav" id="sideNavView">
@@ -74,45 +75,42 @@
                 <button id="confirmDiner" onclick="confirmdinner();">Confirm Dinner</button>
         </div>
         <!--page 2.1 & 2.3  list view-->
-        <div class="container-fluid" id="SecondPage">
-            <div class="col-sm-9"id="searchArea">
-                <div >
-                    <h2>Select Dish</h2>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <form action="action_page.php">
-                            <input type="text" name="keyword">
-                            <button>search</button>
-                        </div>
-                        
-                        <div class="col-sm-8">
-                            <form>
-                                <select name="courseType">
-                                    <option value="Starter">Starter</option>
-                                    <option value="Maindish">Main dish</option>
-                                    <option value="Dessert">Dessert</option>
-                                    </select>
-                              </form>
-                        </div>
-                        
+        
+        <div class="col-sm-9"id="searchArea">
+            <div >
+                <h2>Select Dish</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <form action="action_page.php">
+                        <input type="text" name="keyword">
+                        <button>search</button>
                     </div>
+                    
+                    <div class="col-sm-8">
+                        <form>
+                            <select name="courseType">
+                                <option value="Starter">Starter</option>
+                                <option value="Maindish">Main dish</option>
+                                <option value="Dessert">Dessert</option>
+                                </select>
+                          </form>
+                    </div>
+                    
                 </div>
             </div>
-            <div class= "col-md-9" id="selectDishView">
-              
-                  <h4>Dishes list</h4>
-                  <div class="row" id="allDishes"></div>
-                  
-              </div>
-            </div>
         </div>
-    </div>
+        <div class= "col-md-9" id="selectDishView">
+          
+              <h4>Dishes list</h4>
+              <div class="row" id="allDishes"></div>
+              
+        </div>
          
 
 
 <!--page 2.2 detial view-->
-<div class="col-sm-9" id="detailView">
+        <div class="col-sm-9" id="detailView">
             <div class="row">
                 <div class="col-sm-6">
                     <div><h2 id="onedishname"></h2></div></br>
@@ -146,6 +144,8 @@
                 <h1>PREPARATION</h1>
                   <p>djsllanl  jlajd jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. </p>
             </div>
+        </div>
+    </div>
 </div>
 
 

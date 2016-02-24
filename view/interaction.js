@@ -1,6 +1,7 @@
 /*OK*/
 function createnew() {
   $("#hover-div").hide();
+  $("#SecondPage").show();
   $("#sideNavView").show();
   $("#searchArea").show();
   $("#selectDishView").show();
@@ -22,9 +23,7 @@ function backtoselect() {
 
 /*ok*/
 function confirmdinner() {
-	$("#sideNavView").hide();
-  $("#searchArea").hide();
- 	$("#selectDishView").hide();
+  $("#SecondPage").hide();
  	$("#topBarView").show();
 	$("#dinnerOverviewView").show();	
 }	
@@ -40,14 +39,13 @@ function editmenu() {
 	$("#topBarView").hide();
 	$("#dinnerOverviewView").hide();
 	$("#dinnerPreparationView").hide();
-  $("#sideNavView").show();
-  $("#searchArea").show();
-  $("#selectDishView").show();
+  $("#SecondPage").show();
+  $("#detailView").hide();
 }
 
 /*ok*/
 function finalresult() {
-  $("#DinnerPreparation").show();
-  $("#topBarView").show();
   $("#dinnerOverviewView").hide();
+  $("#DinnerPreparation").show();
+  
 }
