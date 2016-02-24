@@ -12,7 +12,7 @@ var PrepareDishView = function (container, model) {
 	{
 		var dish = dishes[i];
 				
-		prepareDishHtml += "<div class=\"panel panel-default\">"+
+		preparedinnerHtml += "<div class=\"panel panel-default\">"+
 								"<div class=\"panel-body\">"+
 									"<div class=\"col-md-12\">"+
 										"<div class=\"col-md-3 thumb\">"+

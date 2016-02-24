@@ -1,9 +1,10 @@
 //DinnerModel Object constructor
 var DinnerModel= function() {
 	var menu = [];
-	var numberOfGuests = 1; //set default number of guests
-	menu['starter'] = 1; //set a starter to the menu, to use for testing
-	}
+	var numberOfGuests = 3;
+	menu['starter']= 1;//set default number of guests
+	
+	
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
@@ -12,8 +13,8 @@ var DinnerModel= function() {
 	if(num>0) {
 			numberOfGuests = num;
 		}	//TODO Lab 2
-	}
 
+	}
 	// should return 
 	this.getNumberOfGuests = function() {
 			return parseInt(numberOfGuests);
@@ -21,7 +22,7 @@ var DinnerModel= function() {
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
-			var selectedDishes = [];
+			var selectedDish = [];
 			for (key in menu){
 				var dish = this.getDish(menu[key]);
 				if(dish.type==type){
@@ -53,7 +54,7 @@ var DinnerModel= function() {
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-		var ingredients = this.getAllIngredients();
+		var ingredients = this.getAllIngredients;
 		var sum = 0.;
 		for(key in ingredients) {
 			sum += parseFloat(ingredients[key].price) * this.getNumberOfGuests();
@@ -72,6 +73,7 @@ var DinnerModel= function() {
 		var type = this.getDish(id).type;
 		if(menu[type] == id) {
 			delete menu[type]//TODO Lab 2
+		}
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
@@ -364,5 +366,7 @@ var DinnerModel= function() {
 			}]
 		}
 	];
-
 }
+
+
+

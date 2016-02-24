@@ -1,6 +1,6 @@
 $(function() {
 	var model = new DinnerModel();
-	model.setNumberOfGuests(3);
+	model.setNumberOfGuests(5);
 
 	var sideNavView = new SideNavView($("#sideNavView"), model);
 	var selectDishView = new SelectDishView($("#selectDishView"), model);

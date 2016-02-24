@@ -7,10 +7,11 @@ var DinnerOverviewView = function (container, model) {
 	var myDisheslist = model.getAllDishes("starter");
     
     this.topBarnumberOfGuest.html(model.getNumberOfGuests);
-    this.dinnerOverviewtTotalPrice.html(model.getTotalMenuPrice());
+    console.log(topBarnumberOfGuest);
+    this.dinnerOverviewtTotalPrice.html(model.getTotalMenuPrice);
     
 	var myDisheslistHtml = "";
-
+	var myDishes=model.getFullMenu();
 	for (i = 0; i < myDishes.length; i++) { 
 		myDisheslistHtml += "<div class=\"col-md-4\">"+
 				            "<div class=\"col-md-12 col-xs-8 thumb\">"+
@@ -22,7 +23,7 @@ var DinnerOverviewView = function (container, model) {
 					        	"<span class=\"input-group-addon\">" + myDishes[i].name + "</span>"+
 					        "</div>"+
 					        "<div class=\"col-md-12 col-xs-8 thumb\">"+
-								        "<p class=\"parapadding\">"+model.getDishTotalPrice(myDishes[i].id)+" SEK</p>"+
+								        "<p class=\"parapadding\">"+model.getTotalMenuPrice(myDishes[i].id)+" SEK</p>"+
 							"</div>"+
 						"</div>";
     }

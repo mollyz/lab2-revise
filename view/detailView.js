@@ -1,4 +1,4 @@
-var DetailsView = function(container, model) {
+var DetailView = function(container, model) {
 
     this.id = 1;
     this.container = container;
@@ -10,12 +10,13 @@ var DetailsView = function(container, model) {
     this.oneDishIngredientsList = container.find("#oneDishIngredientsList");
     this.oneDishTotalPrice = container.find("#oneDishTotalPrice");
 
-    var oneDish = model.getDish("100");;
-
+    var oneDish = model.getDish("100");
+    var temp=model.getNumberOfGuests();
+    console.log(temp);
     this.oneDishName.html(oneDish.name);
     this.oneDishImage.html("<img src=\"images/"+oneDish.image+"\">");
     this.oneDishDescription.html(oneDish.description);
-    this.oneDishNumberOfGuests.html(model.getNumberOfGuests);
+    this.oneDishNumberOfGuest.html(temp);
 
      var oneDishIngredientsListHtml = "";
     var oneDishIngredientsListArray = oneDish.ingredients;

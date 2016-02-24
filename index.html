@@ -10,7 +10,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="./view/stylecss.css">
+  <link rel="stylesheet" href="stylecss.css">
   
   
 
@@ -41,8 +41,12 @@
                   <div class="row">
                     <div class="col-sm-3">People</div>
                     <div class="col-sm-9">
-                        <p id="numberOfGuests">
+                 <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+                 <span id="numberOfGuests"></span>
+                <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+
                     </div>
+      
                   </div>
                   <br>
                 <div>
@@ -96,10 +100,10 @@
                 </div>
             </div>
             <div class= "col-md-9" id="selectDishView">
-              <div class="floating-box" >
+              
                   <h4>Dishes list</h4>
-                  <div id="allDishes">
-                  </div>
+                  <div class="row" id="allDishes"></div>
+                  
               </div>
             </div>
         </div>

@@ -13,8 +13,8 @@
 /* xuan fu kuang */
 #hover-div{
 	margin-left:30px; 
-	position: fixed;
-	bottom: 100px;
+	position: relative;
+	top: 300px;
 	width: 500px;
 
 	border: 3px solid #73AD21;
@@ -161,9 +161,12 @@ select{
 	padding-left: 20px;
 	padding-right: 20px;
 }
-.floating-box2{
-	float: right;
-    width: 144px;
-    height:220px;
-    margin: 20px; 
+
+}
+img{
+	height: 144px;
+	width: 144px;
+}
+.lanmu{
+	width: 150px;
 }
