@@ -6,13 +6,15 @@ $(function() {
 	var selectDishView = new SelectDishView($("#selectDishView"), model);
 	var detailView = new DetailView($("#detailView"), model);
 	var dinnerOverviewView = new DinnerOverviewView($("#dinnerOverviewView"), model);
-	var PrepareDishView = new PrepareDishView($("#dinnerPreparationView"),model);
-	//var topBarView = new topBarView($("#topBarView"),model);
+	var prepareDishView = new PrepareDishView($("#dinnerPreparationView"),model);
 });
 
 function initialization(){
 	$("#hover-div").show();
-	$("#SecondPage").hide();
+	$("#sideNavView").hide();
+	$("#searchArea").hide();
+	$("#selectDishView").hide();
+	$("#detailView").hide();
 	$("#topBarView").hide();
 	$("#dinnerOverviewView").hide();
 	$("#dinnerPreparationView").hide();

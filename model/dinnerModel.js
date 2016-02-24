@@ -13,7 +13,7 @@ var DinnerModel= function() {
 	if(num>0) {
 			numberOfGuests = num;
 		}	//TODO Lab 2
-		return numberOfGuests;
+
 	}
 	// should return 
 	this.getNumberOfGuests = function() {
