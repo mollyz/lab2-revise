@@ -1,6 +1,5 @@
 var SideNavView = function(container, model){
-	this.model = model;
-    this.container = container;
+	
 	this.numberOfGuests = container.find("#numberOfGuests");
 	this.myMenu = container.find("#myMenu");
 

@@ -1,9 +1,9 @@
-var PrepareDishView = function (container, model) {
-	
-	this.preparedinner = container.find("#preparedinner");
+var topBarView = function (container, model) {
+this.topBarView = container.find("#topBarView");
 
 
-	var dishes = model.getFullMenu();
+	var NumberSet=NumberOf
+	model.getFullMenu();
 
 	var preparedinnerHtml = "",
 		desp = "Description:"
